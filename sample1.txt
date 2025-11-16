@@ -1,0 +1,2 @@
+Hello, this is a test file for encryption.
+If you can read this after decryption, it works!

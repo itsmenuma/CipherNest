@@ -1,0 +1,194 @@
+/* ======================= */
+/*  GLOBAL PAGE BACKGROUND */
+/* ======================= */
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at 20% 20%, #102347, #050a14 70%);
+  color: #e9eef9;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* floating animated particles */
+body::before, body::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: #007bff33;
+  filter: blur(90px);
+  border-radius: 50%;
+  animation: float 14s ease-in-out infinite alternate;
+}
+
+body::after {
+  background: #66b3ff22;
+  width: 300px;
+  height: 300px;
+  top: 40%;
+  left: 60%;
+  animation-duration: 18s;
+}
+
+/* smooth floating bg animation */
+@keyframes float {
+  0% { transform: translateY(0px) translateX(0px); }
+  100% { transform: translateY(-60px) translateX(40px); }
+}
+
+.app {
+  width: 900px;
+  max-width: 95%;
+  z-index: 5;
+}
+
+/* ======================= */
+/* BRAND TITLE */
+/* ======================= */
+
+.brand {
+  text-align: center;
+  font-size: 38px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #82c3ff;
+  text-shadow: 0 0 18px #007bff88;
+  animation: glowPulse 2.8s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 12px #007bff66; }
+  50% { text-shadow: 0 0 26px #2aa4ffaa; }
+  100%{ text-shadow: 0 0 12px #007bff66; }
+}
+
+/* ======================= */
+/* CARDS */
+/* ======================= */
+
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 35px;
+  border-radius: 16px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.65);
+  animation: fadeSlideUp 0.7s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeSlideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* soft card hover float */
+.card:hover {
+  transform: translateY(-6px) scale(1.01);
+  transition: 0.3s ease;
+}
+
+h2 {
+  margin: 0 0 16px 0;
+  font-size: 26px;
+  font-weight: 600;
+  color: #eaf2ff;
+}
+
+/* ======================= */
+/* INPUTS */
+/* ======================= */
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+input[type="password"],
+input[type="file"] {
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid #ffffff20;
+  background: rgba(255, 255, 255, 0.10);
+  color: #fff;
+  font-size: 16px;
+  transition: 0.25s ease;
+}
+
+/* glow on focus */
+input:focus {
+  outline: none;
+  border-color: #2a9dff;
+  box-shadow: 0 0 10px #2a9dff77;
+  transform: scale(1.02);
+}
+
+/* ======================= */
+/* BUTTONS */
+/* ======================= */
+
+button {
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #007bff, #29a3ff);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ripple animation */
+button:active::after {
+  content: "";
+  position: absolute;
+  width: 180%;
+  height: 180%;
+  background: rgba(255, 255, 255, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  animation: ripple 0.4s ease-out forwards;
+}
+
+@keyframes ripple {
+  to { transform: translate(-50%, -50%) scale(1); opacity: 0; }
+}
+
+/* hover glow */
+button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 5px 20px #008cff80;
+}
+
+.logout-btn {
+  background: linear-gradient(135deg, #e74c3c, #ff6f61);
+}
+
+/* ======================= */
+/* MESSAGE TEXT */
+/* ======================= */
+
+.message {
+  margin-top: 16px;
+  color: #ffb3b3;
+  font-size: 15px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

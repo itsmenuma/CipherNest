@@ -1,0 +1,9 @@
+body { font-family: Inter, Arial, sans-serif; background: linear-gradient(180deg,#0b1221,#071026); color: #e6eef8; height:100vh; margin:0; display:flex; align-items:center; justify-content:center; }
+.app { width:920px; max-width:95%; }
+.card { background: rgba(255,255,255,0.03); padding:20px; border-radius:12px; box-shadow: 0 6px 30px rgba(0,0,0,0.6); }
+.auth-card { text-align:center; }
+h2 { margin:0 0 12px 0; }
+.row { display:flex; gap:10px; margin-top:12px; align-items:center; }
+input[type="password"], input[type="file"] { padding:10px; border-radius:8px; border: none; background: rgba(255,255,255,0.03); color:inherit; }
+button { padding:10px 14px; border-radius:8px; border: none; cursor:pointer; background:#007bff; color:white; }
+.message { margin-top:12px; color:#ffd1d1; }
